@@ -30,5 +30,10 @@ class ActionDispatch::IntegrationTest
     Capybara.use_default_driver
   end
 
-  Capybara.default_driver = :selenium
+  # Capybara.default_driver = :selenium
+  Capybara.javascript_driver = :webkit
+  Capybara::Webkit.configure do |config|
+    config.block_unknown_urls
+    config.skip_image_loading
+  end
 end
