@@ -1,11 +1,9 @@
 require 'test_helper'
 
 class HomeControllerTest < ActionController::TestCase
+  test 'GET /' do
+    get :index
 
-    test 'GET /' do
-        get :index
-
-        assert_response :success
-    end
-
+    assert_response :success
+  end
 end

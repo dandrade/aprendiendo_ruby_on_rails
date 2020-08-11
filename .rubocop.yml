@@ -1,0 +1,32 @@
+
+#.rubocop.yml
+AllCops:
+    Exclude:
+        - "vendor/**/*"
+        - "spec/fixtures/**/*"
+        - "tmp/**/*"
+        - "db/**/*"
+        - "bin/**/*"
+        - "config.ru"
+        - "Gemfile"
+        - "Rakefile"
+        - "config/**/*"
+        - "node_modules/**/*"
+    TargetRubyVersion: 2.6
+    DisplayCopNames: true
+    ExtraDetails: true
+    Rails:
+        Enabled: true
+    Style/Encoding:
+        EnforcedStyle: when_needed
+        Enabled: true
+        AutoCorrectEncodingComment: "# encoding: utf-8"
+    Style/FrozenStringLiteralComment:
+        EnforcedStyle: when_needed
+    StringLiterals:
+        EnforcedStyle: double_quotes
+    Style/Documentation:
+        Enabled: false
+    Metrics/LineLength:
+        Exclude:
+            - "config/**/*"
