@@ -29,4 +29,6 @@ class ActionDispatch::IntegrationTest
     Capybara.reset_sessions!
     Capybara.use_default_driver
   end
+
+  Capybara.default_driver = :selenium
 end

@@ -1,3 +1,31 @@
-<h3>Crear una cuenta</h3>
+<h3><%= t('.title') %></h3>
 
-<div id="new_user"></div>
+<%= form_for @user, url: registration_path do |f| %>
+    <%- if @user.errors.any? %>
+
+        <div class='form-error-message'>
+            <%= t('form.error.message') %>
+        </div>
+
+    <% end %>
+
+    <div class='field <%= set_error_class(f.object, :email) %>'>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+    </div>
+
+    <div class='field <%= set_error_class(f.object, :password) %>'>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    </div>
+
+    <div class='field <%= set_error_class(f.object, :password_confirmation) %>'>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+    </div>
+
+    <div class="action">
+        <%= f.submit %>
+    </div>
+
+<% end %>

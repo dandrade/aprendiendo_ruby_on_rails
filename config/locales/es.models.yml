@@ -1,0 +1,9 @@
+es:
+    activerecord:
+        models:
+            user: 'Usuario'
+        attributes:
+            user:
+                email: 'Correo electronico'
+                password: 'Contraseña'
+                password_confirmation: 'Confirmar contraseña'
